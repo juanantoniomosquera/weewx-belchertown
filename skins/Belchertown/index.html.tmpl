@@ -603,10 +603,10 @@
                         <!-- Top bar with city and share -->
                         <div class="wx-stn-info-container">
                             <div class="wx-stn-name">
-                                <h1>$station.location Weather Conditions</h1>                    
+                                <h1>$station.location Condiciones meteorol&oacute;gicas</h1>                    
                             </div>
                             <div class="wx-stn-info">
-                                Observations are powered by a <a href="about" target="_blank">Personal Weather Station</a>
+                                Datos proporcionados por <a href="about" target="_blank">Estaci&oacute;n meteorol&oacute;gica personal</a>
                             </div>
                             <div class="clear"></div>
                             <!-- Updated time ago -->
@@ -616,7 +616,7 @@
                                     <span class="onlineMarker" style="display:none"></span>
                                     <span class="offlineMarker" style="display:none"></span>
                                 </div>
-                                <div class="updated">Last Updated $current.dateTime.format("%B %d, %Y at %I:%M %p")</div>
+                                <div class="updated">&Uacute;ltima actualizaci&oacute;n $current.dateTime.format("%B %d, %Y at %I:%M %p")</div>
                             </div>
                             #if $social_html != ""
                             $social_html
@@ -715,7 +715,7 @@
                                     <table cellpadding="0" cellspacing="0">
                                         <tbody>
                                             <tr>
-                                                <td>Barometer</td>
+                                                <td>Presi&oacute;n</td>
                                                 <td>
                                                     <span class="wx-barometer-data">
                                                         <span class="wx-barometer-value">$current.barometer.format("%.2f")</span><!-- AJAX -->
@@ -733,7 +733,7 @@
                                             </tr>
                                             #if $Extras.has_key("forecast_enabled") and $Extras.forecast_enabled == '1'
                                             <tr>
-                                                <td>Visibility</td>
+                                                <td>Visibilidad</td>
                                                 <td>
                                                     <span class="wx-visibility">
                                                         <span class="wx-visibility-value">$visibility $visibility_unit</span><!-- AJAX -->
@@ -742,7 +742,7 @@
                                             </tr>
                                             #end if
                                             <tr class="dewpoint_row">
-                                                <td>Dew Point</td>
+                                                <td>Punto de roc&iacute;o</td>
                                                 <td>
                                                     <span class="wx-data-dewpoint">
                                                         <span class="wx-dewpoint-value">$current.dewpoint</span><!-- AJAX -->
@@ -750,7 +750,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>Humidity</td>
+                                                <td>Humedad</td>
                                                 <td>
                                                     <span class="wx-data-humidity">
                                                         <span class="wx-humidity-value">$current.outHumidity</span><!-- AJAX -->
@@ -758,7 +758,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>Rainfall</td>
+                                                <td>Precipitaci&oacute;n</td>
                                                 <td>
                                                     <span class="wx-rain-data">
                                                         <span class="wx-rain-value">$day.rain.sum</span><!-- AJAX -->
@@ -798,7 +798,7 @@
                                                 <td colspan="2">
                                                     <div class="row small-almanac">
                                                         <div class="sun-moon-title">
-                                                            Sun &amp; Moon
+                                                            Sol &amp; Luna
                                                         </div>
                                                         <div class="col-sm-5 sun">
                                                             <span class="sunrise-set-image"><img src="$station.station_url/images/sunrise.png"></span><span class="sunrise-value">$almanac.sunrise.format("%-I:%M %p")</span>
@@ -855,7 +855,7 @@
                             <!-- Forecast -->
                             <div class="col-lg-12 forecast">
                                 <div class="forecast-title">
-                                    8 Day Forecast <span class="forecast-subtitle">Last Updated on $forecast_updated</span>
+                                    Predicci&oacute;n 8 d&iacute;as <span class="forecast-subtitle">&Uacute;ltima actualizaci&oacute;n: $forecast_updated</span>
                                 </div>
                                 <div class="row forecasts">
                                     $forecastHTML
@@ -878,25 +878,25 @@
                                 <div class="row">
                                     <div class="row">
                                         <div class="snapshot-records-text">
-                                            Weather Record Snapshots. <a href="records">View all weather records here</a>. 
+                                            Instant&aacute;neas registradas <a href="records">Consulte todos los datos aqu&iacute;</a>. 
                                         </div>
                                         
                                         <div class="col-sm-6 stn-quick-stats">
                                             <div class="stats-title">
-                                                Today, $current.dateTime.format("%A, %B %d, %Y")
+                                                Hoy, $current.dateTime.format("%A, %B %d, %Y")
                                             </div>
                                             <table>
                                                 <tr>
-                                                    <td><b>High:</b></td>    <td><span class="dailystatshigh">$day.outTemp.max</span></td><!-- AJAX -->
-                                                    <td><b>Low:</b></td>    <td><span class="dailystatslow">$day.outTemp.min</span></td><!-- AJAX -->
+                                                    <td><b>M&aacute;xima:</b></td>    <td><span class="dailystatshigh">$day.outTemp.max</span></td><!-- AJAX -->
+                                                    <td><b>M&iacute;nima:</b></td>    <td><span class="dailystatslow">$day.outTemp.min</span></td><!-- AJAX -->
                                                 </tr>
                                                 <tr>
-                                                    <td><b>Highest Wind:</b></td>    <td><span class="dailystatswind">$day.wind.max</span></td><!-- AJAX -->
-                                                    <td><b>Highest UV:</b></td>        <td><span class="dailystatsuv">$day.UV.max</span></td><!-- AJAX -->                    
+                                                    <td><b>R&aacute;faga m&aacute;s alta:</b></td>    <td><span class="dailystatswind">$day.wind.max</span></td><!-- AJAX -->
+                                                    <td><b>M&aacute;ximo UV:</b></td>        <td><span class="dailystatsuv">$day.UV.max</span></td><!-- AJAX -->                    
                                                 </tr>
                                                 <tr>
-                                                    <td><b>Today's Rain:</b></td>    <td><span class="dailystatsrain">$day.rain.sum</span></td><!-- AJAX -->
-                                                    <td><b>Highest Rate:</b></td>    <td><span class="dailystatsrainrate">$day.rainRate.max</span></td><!-- AJAX -->
+                                                    <td><b>Precipitaci&oacute;n de hoy:</b></td>    <td><span class="dailystatsrain">$day.rain.sum</span></td><!-- AJAX -->
+                                                    <td><b>Intensidad m&aacute;xima:</b></td>    <td><span class="dailystatsrainrate">$day.rainRate.max</span></td><!-- AJAX -->
                                                 </tr>
                                             </table>
                                         </div>
@@ -905,20 +905,20 @@
                                         <!-- Quick this month stats -->
                                         <div class="col-sm-6 stn-quick-stats border-left">
                                             <div class="stats-title">
-                                                Month of $current.dateTime.format("%B, %Y")
+                                                Este mes $current.dateTime.format("%B, %Y")
                                             </div>
                                             <table>
                                                 <tr>
-                                                    <td><b>High:</b></td>    <td>$month.outTemp.max</td>
-                                                    <td><b>Low:</b></td>    <td>$month.outTemp.min</td>
+                                                    <td><b>M&aacute;xima:</b></td>    <td>$month.outTemp.max</td>
+                                                    <td><b>M&iacute;nima:</b></td>    <td>$month.outTemp.min</td>
                                                 </tr>
                                                 <tr>
-                                                    <td><b>Highest Wind:</b></td>    <td>$month.wind.max</td>
-                                                    <td><b>Highest UV:</b></td>        <td>$month.UV.max</td>                                    
+                                                    <td><b>R&aacute;faga m&aacute;xima:</b></td>    <td>$month.wind.max</td>
+                                                    <td><b>M&aacute;ximo UV:</b></td>        <td>$month.UV.max</td>                                    
                                                 </tr>
                                                 <tr>
-                                                    <td><b>Total Rain:</b></td>        <td>$month.rain.sum</td>
-                                                    <td><b>Highest Rate:</b></td>    <td>$month.rainRate.max</td>
+                                                    <td><b>Precipitaci&oacute;n total:</b></td>        <td>$month.rain.sum</td>
+                                                    <td><b>Intensidad m&aacute;xima:</b></td>    <td>$month.rainRate.max</td>
                                                 </tr>
                                             </table>
                                         </div>
@@ -929,7 +929,7 @@
                             #if $Extras.has_key('earthquake_enabled') and $Extras.earthquake_enabled == '1'
                             <!-- Earthquake data -->
                             <div class="col-sm-3 earthquake-container border-left">
-                                <div class="eq-title">Recent Local Earthquake</div>
+                                <div class="eq-title">Actividad s&iacute;smica cercana</div>
                                 <div class="eq-region">
                                     <span>$earthquake_time</span>
                                     #if $earthquake_place != ''
@@ -937,7 +937,7 @@
                                     <i class="fa fa-map-marker"></i> <a href="$earthquake_url" target="_blank">$earthquake_place</a>
                                     <div class="row">
                                         <div class="col-sm-6">
-                                            <i class="wi wi-earthquake"></i>Magnitude <span class="magnitude">$earthquake_magnitude</span>
+                                            <i class="wi wi-earthquake"></i>Magnitud <span class="magnitude">$earthquake_magnitude</span>
                                         </div>
                                         <div class="col-sm-6 border-left">
                                             <span>$earthquake_lat &deg;
@@ -946,7 +946,7 @@
                                     </div>
                                     #end if
                                 </div>
-                                <div class="eq-source">Source: <a href="http://usgs.gov" target="_blank">USGS.gov</a></div>
+                                <div class="eq-source">Fuente: <a href="http://usgs.gov" target="_blank">USGS.gov</a></div>
                             </div>
                             #end if
                         </div>
@@ -956,7 +956,7 @@
                         <!-- Begin of fourth row -->
                         <div class="row highcharts-row graph">
                             <div class="col-sm-12 wx-graph-front">
-                                Graphs for today. <a href="$station.station_url/graphs">View more graphs here</a>.
+                                Gr&aacute;ficos de hoy. <a href="$station.station_url/graphs">View more graphs here</a>.
                             </div>
                             
                             <div class="col-sm-6 highcharts-temp">
