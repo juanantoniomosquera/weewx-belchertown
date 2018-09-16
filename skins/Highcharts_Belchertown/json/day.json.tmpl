@@ -2,9 +2,9 @@
 [{
 "utcoffset": $utcOffset,
 "temperatureplot": {"series": 
-{"outTemp": { "zIndex": "1", "name": "Temperature", "data": $outTempDayjson}, 
-"dewpoint": {"name": "Dew Point", "data": $dewpointDayjson}, 
-"appTemp": {"name": "Apparent Temperature", "data": ""}}, 
+{"outTemp": { "zIndex": "1", "name": "Temperatura", "data": $outTempDayjson}, 
+"dewpoint": {"name": "Rocio", "data": $dewpointDayjson}, 
+"appTemp": {"name": "Sensacion termica", "data": ""}}, 
 "yAxisLabel": {"text": #slurp
 #if $unit.unit_type_dict.group_temperature == "degree_C"
  "(\u00B0 C)"
@@ -13,9 +13,9 @@
 #end if
 }}, 
 "windchillplot": {"series": 
-{"appTemp": {"name": "Apparent Temperature", "data": ""}, 
-"windchill": {"name": "Wind Chill", "data": $windchillDayjson}, 
-"heatindex": {"name": "Heat Index", "data": $heatindexDayjson}}, 
+{"appTemp": {"name": "Sensacion termica", "data": ""}, 
+"windchill": {"name": "Frio", "data": $windchillDayjson}, 
+"heatindex": {"name": "Calor", "data": $heatindexDayjson}}, 
 "yAxisLabel": {"text": #slurp
 #if $unit.unit_type_dict.group_temperature == "degree_C"
  "(\u00B0 C)"
@@ -24,10 +24,10 @@
 #end if
 }}, 
 "humidityplot": {"series": 
-{"outHumidity": {"name": "Humidity", "data": $outHumidityDayjson}} 
+{"outHumidity": {"name": "Humedad", "data": $outHumidityDayjson}} 
 }, 
 "barometerplot": {"series": 
-{"barometer": {"name": "Barometer", "data": $barometerDayjson}}, 
+{"barometer": {"name": "Presion", "data": $barometerDayjson}}, 
 "yAxisLabel": {"text": #slurp
 #if $unit.unit_type_dict.group_pressure == "hPa"
  "(hPa)"
@@ -40,8 +40,8 @@
 #end if
 }}, 
 "windplot": {"series": 
-{"windSpeed": {"name": "Wind Speed", "data": $windSpeedDayjson}, 
-"windGust": {"name": "Wind Gust", "data": $windGustDayjson}}, 
+{"windSpeed": {"name": "Velocidad", "data": $windSpeedDayjson}, 
+"windGust": {"name": "Rafaga", "data": $windGustDayjson}}, 
 "yAxisLabel": {"text": #slurp
 #if $unit.unit_type_dict.group_speed == "km_per_hour"
  "(km/h)"
@@ -54,10 +54,10 @@
 #end if
 }}, 
 "winddirplot": {"series": 
-{"windDir": {"name": "Wind Direction", "data": $windDirDayjson}} 
+{"windDir": {"name": "Direccion", "data": $windDirDayjson}} 
 }, 
 "rainplot": {"series": 
-{"rain": {"name": "Rainfall", "data": $rainDayjson}}, 
+{"rain": {"name": "Precipitacion", "data": $rainDayjson}}, 
 "yAxisLabel": {"text": #slurp
 #if $unit.unit_type_dict.group_rain == "mm"
  "(mm)"
@@ -68,7 +68,7 @@
 #end if
 }},
 "rainplottotal": {"series": 
-{"rain": {"name": "Rainfall Total", "data": $rainDayTotaljson}}, 
+{"rain": {"name": "Precipitacion Total", "data": $rainDayTotaljson}}, 
 "yAxisLabel": {"text": #slurp
 #if $unit.unit_type_dict.group_rain == "mm"
  "(mm)"

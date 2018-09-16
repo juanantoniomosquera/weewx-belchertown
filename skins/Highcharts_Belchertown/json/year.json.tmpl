@@ -2,9 +2,9 @@
 [{
 "utcoffset": $utcOffset,
 "temperatureplot": {"series": 
-{"outTemp": {"zIndex": "1", "name": "Max Temperature", "data": $outTempYearjson}, 
-"outTempMin": {"name": "Min Temperature", "data": $outTempMinYearjson},
-"dewpoint": {"name": "Dew Point", "data": $dewpointYearjson}}, 
+{"outTemp": {"zIndex": "1", "name": "Max Temp.", "data": $outTempYearjson}, 
+"outTempMin": {"name": "Min Temp.", "data": $outTempMinYearjson},
+"dewpoint": {"name": "Rocio", "data": $dewpointYearjson}}, 
 "yAxisLabel": {"text": #slurp
 #if $unit.unit_type_dict.group_temperature == "degree_C"
  "(\u00B0 C)"
@@ -13,8 +13,8 @@
 #end if
 }}, 
 "windchillplot": {"series": 
-{"windchill": {"name": "Wind Chill", "data": $windchillYearjson}, 
-"heatindex": {"name": "Heat Index", "data": $heatindexYearjson}}, 
+{"windchill": {"name": "Frio", "data": $windchillYearjson}, 
+"heatindex": {"name": "Calor", "data": $heatindexYearjson}}, 
 "yAxisLabel": {"text": #slurp
 #if $unit.unit_type_dict.group_temperature == "degree_C"
  "(\u00B0 C)"
@@ -23,10 +23,10 @@
 #end if
 }}, 
 "humidityplot": {"series": 
-{"outHumidity": {"name": "Humidity", "data": $outHumidityYearjson}}
+{"outHumidity": {"name": "Humedad", "data": $outHumidityYearjson}}
 }, 
 "barometerplot": {"series": 
-{"barometer": {"name": "Barometer", "data": $barometerYearjson}}, 
+{"barometer": {"name": "Presion", "data": $barometerYearjson}}, 
 "yAxisLabel": {"text": #slurp
 #if $unit.unit_type_dict.group_pressure == "hPa"
  "(hPa)"
@@ -39,9 +39,9 @@
 #end if
 }}, 
 "windplot": {"series": 
-{"windSpeed": {"name": "Max Wind Speed", "data": $windSpeedYearjson}, 
-"windSpeedAvg": {"name": "Average Wind Speed", "data": $windSpeedAvgYearjson}, 
-"windGust": {"name": "Wind Gust", "data": $windGustYearjson}}, 
+{"windSpeed": {"name": "Max Velocidad", "data": $windSpeedYearjson}, 
+"windSpeedAvg": {"name": "Media Velocidad", "data": $windSpeedAvgYearjson}, 
+"windGust": {"name": "Rafaga", "data": $windGustYearjson}}, 
 "yAxisLabel": {"text": #slurp
 #if $unit.unit_type_dict.group_speed == "km_per_hour"
  "(km/h)"
@@ -54,10 +54,10 @@
 #end if
 }}, 
 "winddirplot": {"series": 
-{"windDir": {"name": "Wind Direction", "data": $windDirYearjson}}
+{"windDir": {"name": "Direccion", "data": $windDirYearjson}}
 }, 
 "rainplot": {"series": 
-{"rain": {"name": "Rainfall", "data": $rainYearjson}}, 
+{"rain": {"name": "Precipitacion", "data": $rainYearjson}}, 
 "yAxisLabel": {"text": #slurp
 #if $unit.unit_type_dict.group_rain == "mm"
  "(mm)"
