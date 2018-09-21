@@ -653,7 +653,7 @@
                                                     <table class="stn-high-low-table">
                                                         <tbody>
                                                             <tr>
-                                                                <td class="stn-high-low-table-title">High</td>
+                                                                <td class="stn-high-low-table-title">Alta</td>
                                                                 <td class="stn-high-low-table-title border-left">Low</td>
                                                             </tr>
                                                             <tr>
@@ -691,8 +691,8 @@
                                             <table class="wind-table">
                                                 <tbody>
                                                     <tr>
-                                                        <td class="windtext">Speed</td>
-                                                        <td class="windtext border-left gust">Gust</td>
+                                                        <td class="windtext">Velocidad</td>
+                                                        <td class="windtext border-left gust">R&aacute;faga</td>
                                                     </tr>
                                                     <tr>
                                                         <td><span class="curwindspeed">#echo "%.1f" % int( float( $current.windSpeed.formatted ) )#</span></td>
@@ -891,12 +891,12 @@
                                                     <td><b>M&iacute;nima:</b></td>    <td><span class="dailystatslow">$day.outTemp.min</span></td><!-- AJAX -->
                                                 </tr>
                                                 <tr>
-                                                    <td><b>R&aacute;faga m&aacute;s alta:</b></td>    <td><span class="dailystatswind">$day.wind.max</span></td><!-- AJAX -->
+                                                    <td><b>R&aacute;faga max.:</b></td>    <td><span class="dailystatswind">$day.wind.max</span></td><!-- AJAX -->
                                                     <td><b>M&aacute;ximo UV:</b></td>        <td><span class="dailystatsuv">$day.UV.max</span></td><!-- AJAX -->                    
                                                 </tr>
                                                 <tr>
-                                                    <td><b>Precipitaci&oacute;n de hoy:</b></td>    <td><span class="dailystatsrain">$day.rain.sum</span></td><!-- AJAX -->
-                                                    <td><b>Intensidad m&aacute;xima:</b></td>    <td><span class="dailystatsrainrate">$day.rainRate.max</span></td><!-- AJAX -->
+                                                    <td><b>Precip. de hoy:</b></td>    <td><span class="dailystatsrain">$day.rain.sum</span></td><!-- AJAX -->
+                                                    <td><b>Intensidad max.:</b></td>    <td><span class="dailystatsrainrate">$day.rainRate.max</span></td><!-- AJAX -->
                                                 </tr>
                                             </table>
                                         </div>
@@ -913,12 +913,12 @@
                                                     <td><b>M&iacute;nima:</b></td>    <td>$month.outTemp.min</td>
                                                 </tr>
                                                 <tr>
-                                                    <td><b>R&aacute;faga m&aacute;xima:</b></td>    <td>$month.wind.max</td>
+                                                    <td><b>R&aacute;faga max.:</b></td>    <td>$month.wind.max</td>
                                                     <td><b>M&aacute;ximo UV:</b></td>        <td>$month.UV.max</td>                                    
                                                 </tr>
                                                 <tr>
-                                                    <td><b>Precipitaci&oacute;n total:</b></td>        <td>$month.rain.sum</td>
-                                                    <td><b>Intensidad m&aacute;xima:</b></td>    <td>$month.rainRate.max</td>
+                                                    <td><b>Precip. total:</b></td>        <td>$month.rain.sum</td>
+                                                    <td><b>Intensidad max.:</b></td>    <td>$month.rainRate.max</td>
                                                 </tr>
                                             </table>
                                         </div>
