@@ -1,4 +1,4 @@
-# Extension for the Belchertown skin. 
+################################################################################ Extension for the Belchertown skin. 
 # This extension builds search list extensions as well
 # as a crude "cron" to download necessary files. 
 #
@@ -355,30 +355,30 @@ class getData(SearchList):
                 
                 condition_text = ""
                 if daily_data["icon"] == "clear-day":
-                    condition_text = "Clear"
+                    condition_text = "Despejado"
                 elif daily_data["icon"] == "clear-night":
-                    condition_text = "Clear"
+                    condition_text = "Despejado"
                 elif daily_data["icon"] == "rain":
-                    condition_text = "Rain"
+                    condition_text = "Lluvioso"
                 elif daily_data["icon"] == "snow":
-                    condition_text = "Snow"
+                    condition_text = "Nevado"
                 elif daily_data["icon"] == "sleet":
-                    condition_text = "Sleet"
+                    condition_text = "Aguanieve"
                 elif daily_data["icon"] == "wind":
-                    condition_text = "Windy"
+                    condition_text = "Ventoso"
                 elif daily_data["icon"] == "fog":
-                    condition_text = "Fog"
+                    condition_text = "Niebla"
                 elif daily_data["icon"] == "cloudy":
-                    condition_text = "Overcast"
+                    condition_text = "Nublado"
                 elif daily_data["icon"] == "partly-cloudy-day":
-                    condition_text = "Partly Cloudy"
+                    condition_text = "Nubes aisladas"
                 elif daily_data["icon"] == "partly-cloudy-night":
                     # https://darksky.net/dev/docs/faq - So you can just treat partly-cloudy-night as an alias for clear-day.
-                    condition_text = "Clear"
+                    condition_text = "Despejado"
                 elif daily_data["icon"] == "hail":
-                    condition_text = "Hail"
+                    condition_text = "Granizo"
                 elif daily_data["icon"] == "thunderstorm":
-                    condition_text = "Thunderstorm"
+                    condition_text = "Tormenta"
                 elif daily_data["icon"] == "tornado":
                     condition_text = "Tornado"
             
