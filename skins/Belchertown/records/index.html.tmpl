@@ -22,7 +22,7 @@
                                 </div>
                                 <div class="col-sm-5" style="float:right;">
                                     <div class="wx-stn-info">
-                                        Observations are powered by a <a href="$station.station_url/about" target="_blank">Personal Weather Station</a>
+                                        Datos proporcionados por  <a href="$station.station_url/about" target="_blank">Estaci&oacute;n meteorol&oacute;gica personal</a>
                                     </div>
                                 </div>
                             </div>
@@ -52,22 +52,22 @@
                             <table class="table-striped">
                                 <tbody>
                                     <tr>
-                                        <td class="records-header" colspan=5>Temperature Records</td>
+                                        <td class="records-header" colspan=5>Registros de temperatura</td>
                                     </tr>                        
                                     <tr>
                                         <td class="records-header" colspan=1> </td>
                                         <td class="records-header" colspan=2>$current.dateTime.format("%Y")</td>
-                                        <td class="records-header-alltime" colspan=2>All Time</td>
+                                        <td class="records-header-alltime" colspan=2>Todo</td>
                                     </tr>
                                     <tr>
-                                        <td>Highest Temperature</td>
+                                        <td>Temperatura m&aacute;x.</td>
                                         <td class="leftborder">$year.outTemp.max</td>
                                         <td>$year.outTemp.maxtime.format("%B %-d, %Y at %-I:%M %p")</td>
                                         <td class="leftborder">$alltime.outTemp.maxtime.format("%B %-d, %Y at %-I:%M %p")</td>
                                         <td>$alltime.outTemp.max</td>
                                     </tr>
                                     <tr>
-                                        <td>Lowest Temperature</td>
+                                        <td>Temperatura min.</td>
                                         <td class="leftborder">$year.outTemp.min</td>
                                         <td>$year.outTemp.mintime.format("%B %-d, %Y at %-I:%M %p")</td>
                                         <td class="leftborder">$alltime.outTemp.mintime.format("%B %-d, %Y at %-I:%M %p")</td>
@@ -75,14 +75,14 @@
                                     </tr>
                                     #if $Extras.has_key('show_apptemp') and $Extras.show_apptemp == '1'
                                     <tr>
-                                        <td>Highest Apparent Temperature</td>
+                                        <td>Temperatura m&aacute;x. aparente</td>
                                         <td class="leftborder">$year.appTemp.max</td>
                                         <td>$year.appTemp.maxtime.format("%B %-d, %Y at %-I:%M %p")</td>
                                         <td class="leftborder">$alltime.appTemp.maxtime.format("%B %-d, %Y at %-I:%M %p") $unit.label.outTemp</td>
                                         <td>$alltime.appTemp.max</td>
                                     </tr>
                                     <tr>
-                                        <td>Lowest Apparent Temperature</td>
+                                        <td>Temperatur m&iacute;n. aparente</td>
                                         <td class="leftborder">$year.appTemp.min</td>
                                         <td>$year.appTemp.mintime.format("%B %-d, %Y at %-I:%M %p")</td>
                                         <td class="leftborder">$alltime.appTemp.mintime.format("%B %-d, %Y at %-I:%M %p")</td>
@@ -90,28 +90,28 @@
                                     </tr>
                                     #end if
                                     <tr>
-                                        <td>Highest Heat Index</td>
+                                        <td>Calor m&aacute;x.</td>
                                         <td class="leftborder">$year.heatindex.max</td>
                                         <td>$year.heatindex.maxtime.format("%B %-d, %Y at %-I:%M %p")</td>
                                         <td class="leftborder">$alltime.heatindex.maxtime.format("%B %-d, %Y at %-I:%M %p")</td>
                                         <td>$alltime.heatindex.max</td>
                                     </tr>  
                                     <tr>
-                                        <td>Lowest Wind Chill</td>
+                                        <td>Fr&iacute;o m&iacute;n.</td>
                                         <td class="leftborder">$year.windchill.min</td>
                                         <td>$year.windchill.mintime.format("%B %-d, %Y at %-I:%M %p")</td>
                                         <td class="leftborder">$alltime.windchill.mintime.format("%B %-d, %Y at %-I:%M %p")</td>
                                         <td>$alltime.windchill.min</td>
                                     </tr>
                                     <tr>
-                                        <td>Largest Daily Temperature Range</td>
+                                        <td>Mayor rango de temperatura diaria</td>
                                         <td class="leftborder">$year_temp_range_max[1] $unit.label.outTemp</td>
                                         <td>#echo time.strftime( "%B %d, %Y", time.localtime( $year_temp_range_max[0] ) ) #<br>(Min: $year_temp_range_max[2] $unit.label.outTemp - Max: $year_temp_range_max[3] $unit.label.outTemp )</td>
                                         <td class="leftborder">#echo time.strftime( "%B %d, %Y", time.localtime( $at_temp_range_max[0] ) ) #<br>(Min: $at_temp_range_max[2] $unit.label.outTemp - Max: $at_temp_range_max[3] $unit.label.outTemp )</td>
                                         <td>$at_temp_range_max[1] $unit.label.outTemp</td>
                                     </tr>                           
                                     <tr>
-                                        <td>Smallest Daily Temperature Range</td>
+                                        <td>Menor rango de temperatura diaria</td>
                                         <td class="leftborder">$year_temp_range_min[1] $unit.label.outTemp</td>
                                         <td>#echo time.strftime( "%B %d, %Y", time.localtime( $year_temp_range_min[0] ) ) #<br>(Min: $year_temp_range_min[2] $unit.label.outTemp - Max: $year_temp_range_min[3] $unit.label.outTemp )</td>
                                         <td class="leftborder">#echo time.strftime( "%B %d, %Y", time.localtime( $at_temp_range_min[0] ) ) #<br>(Min: $at_temp_range_min[2] $unit.label.outTemp - Max: $at_temp_range_min[3] $unit.label.outTemp )</td>
@@ -119,15 +119,15 @@
                                     </tr>
                                     
                                     <tr>
-                                        <td class="records-header" colspan=5>Wind Records</td>
+                                        <td class="records-header" colspan=5>Registro de viento</td>
                                     </tr>
                                     <tr>
                                         <td class="records-header" colspan=1> </td>                                    
                                         <td class="records-header" colspan=2>$current.dateTime.format("%Y")</td>
-                                        <td class="records-header-alltime" colspan=2>All Time</td>
+                                        <td class="records-header-alltime" colspan=2>Todo</td>
                                     </tr>                        
                                     <tr>
-                                        <td>Strongest Wind Gust</td>
+                                        <td>R&aacute;faga m&aacute;x.</td>
                                         <td class="leftborder">$year.windGust.max</td>
                                         <td>$year.windGust.maxtime.format("%B %-d, %Y at %-I:%M %p")</td>
                                         <td class="leftborder">$alltime.windGust.maxtime.format("%B %-d, %Y at %-I:%M %p")</td>
@@ -135,7 +135,7 @@
                                     </tr>
                                     #if $Extras.has_key('show_windrun') and $Extras.show_windrun == '1'
                                     <tr>
-                                        <td>Highest Daily Wind Run</td>
+                                        <td>Viento m&aacute;x. diario</td>
                                         <td class="leftborder">$year.windrun.max</td>
                                         <td>$year.windrun.maxtime.format("%B %-d, %Y at %-I:%M %p")</td>
                                         <td class="leftborder">$alltime.windrun.maxtime.format("%B %-d, %Y at %-I:%M %p")</td>
@@ -143,87 +143,87 @@
                                     </tr>
                                     #end if
                                     <tr>
-                                        <td class="records-header" colspan=5>Rain Records</td>
+                                        <td class="records-header" colspan=5>Registro de precipitaci&oacute;n</td>
                                     </tr>
                                     <tr>
                                         <td class="records-header" colspan=1> </td>                                    
                                         <td class="records-header" colspan=2>$current.dateTime.format("%Y")</td>
-                                        <td class="records-header-alltime" colspan=2>All Time</td>
+                                        <td class="records-header-alltime" colspan=2>Todo</td>
                                     </tr>                        
                                     <tr>
-                                        <td>Highest Daily Rainfall</td>
+                                        <td>Precipitaci&oacute;n diaria m&aacute;x.</td>
                                         <td class="leftborder">$rainiest_day[1] $unit.label.rain</td>
                                         <td>#echo time.strftime( "%B %d, %Y", time.localtime( $rainiest_day[0] ) )#</td>
                                         <td class="leftborder">$at_rainiest_day[0]</td>
                                         <td>$at_rainiest_day[1] $unit.label.rain</td>
                                     </tr>
                                     <tr>
-                                        <td>Highest Daily Rainfall Rate</td>
+                                        <td>Precipitaci&oacute;n promedia diaria m&aacute;x.</td>
                                         <td class="leftborder">$year.rainRate.max</td>
                                         <td>$year.rainRate.maxtime.format("%B %-d, %Y at %-I:%M %p")</td>
                                         <td class="leftborder">$alltime.rainRate.maxtime.format("%B %-d, %Y at %-I:%M %p")</td>
                                         <td>$alltime.rainRate.max</td>
                                     </tr>
                                     <tr>
-                                        <td>Month with Highest Total Rainfall</td>
+                                        <td>Precipitaci&oacute;n promedia mensual m&aacute;x.</td>
                                         <td class="leftborder">$year_rainiest_month[1] $unit.label.rain</td>
                                         <td>$year_rainiest_month[0]</td>
                                         <td class="leftborder">$at_rainiest_month[0]</td>
                                         <td>$at_rainiest_month[1] $unit.label.rain</td>
                                     </tr>
                                     <tr>
-                                        <td>Total Rainfall for </td>
+                                        <td>Precipitaci&oacute;n total para  </td>
                                         <td class="leftborder">$current.dateTime.format("%Y")</td>
                                         <td>$year.rain.sum</td>
                                         <td class="leftborder">$alltime.rain.maxtime.format("%Y")</td>                            
                                         <td>$alltime.rain.sum</td>
                                     </tr>                        
                                     <tr>
-                                        <td>Consecutive Days With Rainfall</td>
+                                        <td>D&iacute;as consecutivos con precipitaci&oacute;n</td>
                                         <td class="leftborder">$year_days_with_rain[0] days</td>
                                         <td>ending #echo time.strftime( "%B %d, %Y", time.localtime( $year_days_with_rain[1] ) )#</td>
-                                        <td class="leftborder">Highest Year</td>
+                                        <td class="leftborder">A&ntilde;o m&aacute;s alto</td>
                                         <td>$at_days_with_rain[0] days in #echo time.strftime( "%Y", time.localtime( $at_days_with_rain[1] ) )#</td>
                                     </tr>                        
                                     <tr>
-                                        <td>Consecutive Days Without Rainfall</td>
+                                        <td>D&iacute;as consecutivos sin precipitaci&oacute;n</td>
                                         <td class="leftborder">$year_days_without_rain[0] days</td>
                                         <td>ending #echo time.strftime( "%B %d, %Y", time.localtime( $year_days_without_rain[1] ) )#</td>
-                                        <td class="leftborder">Highest Year</td>
+                                        <td class="leftborder">A&ntilde;o m&aacute;s alto</td>
                                         <td>$at_days_without_rain[0] days in #echo time.strftime( "%Y", time.localtime( $at_days_without_rain[1] ) )#</td>                            
                                     </tr>
                                  
                                     <tr>
-                                        <td class="records-header" colspan=5>Humidity Records</td>
+                                        <td class="records-header" colspan=5>Registros de humedad</td>
                                     </tr>
                                     <tr>
                                         <td class="records-header" colspan=1> </td>                                    
                                         <td class="records-header" colspan=2>$current.dateTime.format("%Y")</td>
-                                        <td class="records-header-alltime" colspan=2>All Time</td>
+                                        <td class="records-header-alltime" colspan=2>Todo</td>
                                     </tr>                        
                                     <tr>
-                                        <td>Highest Humidity</td>
+                                        <td>Humedad m&aacute;x.</td>
                                         <td class="leftborder">$year.outHumidity.max</td>
                                         <td>$year.outHumidity.maxtime.format("%B %-d, %Y at %-I:%M %p")</td>
                                         <td class="leftborder">$alltime.outHumidity.maxtime.format("%B %-d, %Y at %-I:%M %p")</td>
                                         <td>$alltime.outHumidity.max</td>
                                     </tr>
                                     <tr>
-                                        <td>Lowest Humidity</td>
+                                        <td>Humedad m&iacute;n.</td>
                                         <td class="leftborder">$year.outHumidity.min</td>
                                         <td>$year.outHumidity.mintime.format("%B %-d, %Y at %-I:%M %p")</td>
                                         <td class="leftborder">$alltime.outHumidity.mintime.format("%B %-d, %Y at %-I:%M %p")</td>
                                         <td>$alltime.outHumidity.min</td>                            
                                     </tr>
                                     <tr>
-                                        <td>Highest Dewpoint</td>
+                                        <td>Punto de roc&iacute;o m&aacute;x.</td>
                                         <td class="leftborder">$year.dewpoint.max</td>
                                         <td>$year.dewpoint.maxtime.format("%B %-d, %Y at %-I:%M %p")</td>
                                         <td class="leftborder">$alltime.dewpoint.maxtime.format("%B %-d, %Y at %-I:%M %p")</td>
                                         <td>$alltime.dewpoint.max</td>                            
                                     </tr>
                                     <tr>
-                                        <td>Lowest Dewpoint</td>
+                                        <td>Punto de roc&iacute;o m&iacute;n.</td>
                                         <td class="leftborder">$year.dewpoint.min</td>
                                         <td>$year.dewpoint.mintime.format("%B %-d, %Y at %-I:%M %p")</td>
                                         <td class="leftborder">$alltime.dewpoint.mintime.format("%B %-d, %Y at %-I:%M %p")</td>
@@ -231,49 +231,26 @@
                                     </tr>
                                     
                                     <tr>
-                                        <td class="records-header" colspan=5>Barometer Records</td>
+                                        <td class="records-header" colspan=5>Registros de presi&oacute;n</td>
                                     </tr>
                                     <tr>
                                         <td class="records-header" colspan=1> </td>                                    
                                         <td class="records-header" colspan=2>$current.dateTime.format("%Y")</td>
-                                        <td class="records-header-alltime" colspan=2>All Time</td>
+                                        <td class="records-header-alltime" colspan=2>Todo</td>
                                     </tr>                          
                                     <tr>
-                                        <td>Highest Barometer</td>
+                                        <td>Presi&oacute;n m&aacute;x.</td>
                                         <td class="leftborder">$year.barometer.max</td>
                                         <td>$year.barometer.maxtime.format("%B %-d, %Y at %-I:%M %p")</td>
                                         <td class="leftborder">$alltime.barometer.maxtime.format("%B %-d, %Y at %-I:%M %p")</td>
                                         <td>$alltime.barometer.max</td>                            
                                     </tr>
                                     <tr>
-                                        <td>Lowest Barometer</td>
+                                        <td>Presi&oacute;n m&iacute;n.</td>
                                         <td class="leftborder">$year.barometer.min</td>
                                         <td>$year.barometer.mintime.format("%B %-d, %Y at %-I:%M %p")</td>
                                         <td class="leftborder">$alltime.barometer.mintime.format("%B %-d, %Y at %-I:%M %p")</td>
                                         <td>$alltime.barometer.min</td>                             
-                                    </tr>
-                                    
-                                    <tr>
-                                        <td class="records-header" colspan=5>Sun Records</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="records-header" colspan=1> </td>                                    
-                                        <td class="records-header" colspan=2>$current.dateTime.format("%Y")</td>
-                                        <td class="records-header-alltime" colspan=2>All Time</td>
-                                    </tr>                          
-                                    <tr>
-                                        <td>Highest Solar Radiation</td>
-                                        <td class="leftborder">$year.radiation.max</td>
-                                        <td>$year.radiation.maxtime.format("%B %-d, %Y at %-I:%M %p")</td>
-                                        <td class="leftborder">$alltime.radiation.maxtime.format("%B %-d, %Y at %-I:%M %p")</td>
-                                        <td>$alltime.radiation.max</td>                             
-                                    </tr>                        
-                                    <tr>
-                                        <td>Highest UV</td>
-                                        <td class="leftborder">$year.UV.max</td>
-                                        <td>$year.UV.maxtime.format("%B %-d, %Y at %-I:%M %p")</td>
-                                        <td class="leftborder">$alltime.UV.maxtime.format("%B %-d, %Y at %-I:%M %p")</td>
-                                        <td>$alltime.UV.max</td>                             
                                     </tr>
                                 </tbody>
                             </table>

@@ -1,4 +1,4 @@
-################################################################################ Extension for the Belchertown skin. 
+# Extension for the Belchertown skin. 
 # This extension builds search list extensions as well
 # as a crude "cron" to download necessary files. 
 #
@@ -284,7 +284,7 @@ class getData(SearchList):
             forecast_stale_timer = self.generator.skin_dict['Extras']['forecast_stale']
             forecast_is_stale = False
             
-            forecast_url = "https://api.darksky.net/forecast/%s/%s,%s?units=%s" % ( darksky_secret_key, latitude, longitude, darksky_units )
+            forecast_url = "https://api.darksky.net/forecast/%s/%s,%s?units=%s&lang=es" % ( darksky_secret_key, latitude, longitude, darksky_units )
             
             # Determine if the file exists and get it's modified time
             if os.path.isfile( forecast_file ):
@@ -359,19 +359,19 @@ class getData(SearchList):
                 elif daily_data["icon"] == "clear-night":
                     condition_text = "Despejado"
                 elif daily_data["icon"] == "rain":
-                    condition_text = "Lluvioso"
+                    condition_text = "Lluvia"
                 elif daily_data["icon"] == "snow":
-                    condition_text = "Nevado"
+                    condition_text = "Nieve"
                 elif daily_data["icon"] == "sleet":
                     condition_text = "Aguanieve"
                 elif daily_data["icon"] == "wind":
-                    condition_text = "Ventoso"
+                    condition_text = "Viento"
                 elif daily_data["icon"] == "fog":
                     condition_text = "Niebla"
                 elif daily_data["icon"] == "cloudy":
                     condition_text = "Nublado"
                 elif daily_data["icon"] == "partly-cloudy-day":
-                    condition_text = "Nubes aisladas"
+                    condition_text = "Claros"
                 elif daily_data["icon"] == "partly-cloudy-night":
                     # https://darksky.net/dev/docs/faq - So you can just treat partly-cloudy-night as an alias for clear-day.
                     condition_text = "Despejado"
@@ -386,7 +386,7 @@ class getData(SearchList):
                 if time.strftime( "%a %m/%d", time.localtime( daily_data["time"] ) ) == time.strftime( "%a %m/%d", time.localtime( time.time() ) ):
                     # If the time in the darksky output is today, do not add border-left and say "Today" in the header
                     output = '<div class="col-sm-1-5 wuforecast">'
-                    weekday = "Today"
+                    weekday = "Hoy"
                 else:
                     output = '<div class="col-sm-1-5 wuforecast border-left">'
                     weekday = time.strftime( "%a %-m/%d", time.localtime( daily_data["time"] ) )
